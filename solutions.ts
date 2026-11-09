@@ -2,7 +2,8 @@ const multiplyValue = (value: number, multiplier?: number): number => {
   return value * (multiplier !== undefined ? multiplier : 2);
 };
 
-const processInput = (value: number | string | boolean): number | string => {
+type TPrimitiveInput = number | string | boolean;
+const processInput = (value: TPrimitiveInput): number | string => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
   }
